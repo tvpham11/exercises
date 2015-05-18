@@ -131,5 +131,14 @@ function filterLongWords(words, i){
 // ---------------------
 
 function charFreq(string){
-    //...
+  var frequency = {};
+  for (var i = 0; i < string.length; i++) {
+    var letter = string.charAt(i);
+    if (frequency[letter]) {
+      frequency[letter]++;
+    } else {
+      frequency[letter] = 1;
+    }
+  }
+  return frequency;
 }
